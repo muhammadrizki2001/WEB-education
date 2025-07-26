@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulus Interaktif</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        section {
+            padding: 60px 0;
+        }
+        .bg-light-blue {
+            background-color: #f0f8ff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Kalkulus Interaktif</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#materi">Materi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contoh">Contoh Soal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kuis">Kuis Interaktif</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="beranda" class="text-center">
+        <div class="container">
+            <h1 class="display-4">Selamat Datang di Dunia Kalkulus</h1>
+            <p class="lead">Platform untuk mempelajari konsep dasar turunan dan integral secara mudah dan interaktif.</p>
+        </div>
+    </section>
+
+    <section id="materi" class="bg-light-blue">
+        <div class="container">
+            <h2 class="text-center mb-5">Materi Dasar</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Turunan (Diferensial)</h3>
+                    <p>Turunan adalah konsep yang mengukur <strong>laju perubahan sesaat</strong> dari sebuah fungsi. Secara geometris, turunan di suatu titik merepresentasikan <em>kemiringan garis singgung</em> pada kurva di titik tersebut.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tangent_to_a_curve.svg/450px-Tangent_to_a_curve.svg.png" class="img-fluid rounded mb-3" alt="Garis Singgung Kurva">
+                    <p>Dengarkan penjelasan singkat tentang turunan:</p>
+                    <audio controls class="w-100">
+                        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                        Browser Anda tidak mendukung elemen audio.
+                    </audio>
+                </div>
+                <div class="col-md-6">
+                    <h3>Integral</h3>
+                    <p>Integral adalah kebalikan dari operasi turunan dan sering disebut sebagai antiturunan. Integral digunakan untuk menghitung luas di bawah kurva, volume, dan banyak aplikasi lainnya.</p>
+                    <p>Jenis-jenis integral:</p>
+                    <ul>
+                        <li>Integral Tak Tentu (Indefinite Integral)</li>
+                        <li>Integral Tentu (Definite Integral)</li>
+                    </ul>
+                    <p>Tonton video penjelasan tentang integral:</p>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/S2zCHEUaE1A" title="YouTube video player" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contoh">
+        <div class="container">
+            <h2 class="text-center mb-4">Contoh Soal</h2>
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Jenis</th>
+                        <th>Soal</th>
+                        <th>Penyelesaian</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Turunan</td>
+                        <td>$f(x) = 3x^4 + 5x^2$</td>
+                        <td>$f'(x) = 12x^3 + 10x$</td>
+                    </tr>
+                    <tr>
+                        <td>Integral</td>
+                        <td>$\int (2x + 1) \,dx$</td>
+                        <td>$x^2 + x + C$</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="kuis" class="bg-light-blue">
+        <div class="container">
+            <h2 class="text-center mb-4">Uji Pemahaman Anda!</h2>
+            <form id="quizForm">
+                <div class="mb-3">
+                    <p>1. Apa turunan dari $f(x) = 5x^2$?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" value="a" id="q1a">
+                        <label class="form-check-label" for="q1a">10x</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" value="b" id="q1b">
+                        <label class="form-check-label" for="q1b">5x</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <p>2. Apa hasil dari $\int 2 \,dx$?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="a" id="q2a">
+                        <label class="form-check-label" for="q2a">2</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="b" id="q2b">
+                        <label class="form-check-label" for="q2b">2x + C</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Kirim Jawaban</button>
+            </form>
+            <div id="hasilKuis" class="mt-4 fs-4 text-center"></div>
+        </div>
+    </section>
+
+    <section id="kontak">
+        <div class="container">
+            <h2 class="text-center mb-4">Hubungi Kami</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="nama" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="pesan" class="form-label">Pesan</label>
+                    <textarea class="form-control" id="pesan" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">Kirim</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p class="m-0">Copyright &copy; Muhammad Rizki Universitas Siber Asia</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            // Mencegah form dari pengiriman standar
+            event.preventDefault(); 
+
+            let skor = 0;
+            const jawabanBenar = {
+                q1: 'a',
+                q2: 'b'
+            };
+
+            // Mengambil jawaban pengguna
+            const jawabanPengguna = {
+                q1: document.querySelector('input[name="q1"]:checked'),
+                q2: document.querySelector('input[name="q2"]:checked')
+            };
+
+            // Memeriksa apakah semua pertanyaan dijawab
+            if (jawabanPengguna.q1 && jawabanPengguna.q2) {
+                // Memeriksa jawaban q1
+                if (jawabanPengguna.q1.value === jawabanBenar.q1) {
+                    skor++;
+                }
+                // Memeriksa jawaban q2
+                if (jawabanPengguna.q2.value === jawabanBenar.q2) {
+                    skor++;
+                }
+                
+                // Menampilkan hasil
+                const hasilContainer = document.getElementById('hasilKuis');
+                hasilContainer.innerHTML = `Skor Anda: ${skor} dari 2.`;
+
+            } else {
+                // Memberi peringatan jika ada pertanyaan yang belum dijawab
+                alert('Harap jawab semua pertanyaan!');
+            }
+        });
+    </script>
+</body>
+</html>
